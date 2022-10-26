@@ -16,8 +16,8 @@ img {
 
 
 .container {
-  width: 50%;
-  margin: 30px auto;
+  width: 46%;
+  margin: 70px auto;
 }
 
 
@@ -92,7 +92,7 @@ img {
 
 .top h2 {
   position: absolute;
-  top: 5%;
+  top: 3%;
   right: 5%;
   font-size: 1.5rem;
   color: #cb1616;
