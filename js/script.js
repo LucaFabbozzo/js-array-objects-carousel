@@ -17,7 +17,7 @@ const topSlider = document.querySelector('.top');
 const bottomSlider = document.querySelector('.bottom');
 const btnNext = document.querySelector('.right');
 const btnPrev = document.querySelector('.left');
-
+const btnBottomStop = document.querySelector('.btn_bottom_stop');
 
 let topImages = '';
 let bottomImages = '';
@@ -85,6 +85,19 @@ thumbs[counterImages].classList.add('active');
 
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
+btnBottomStop.addEventListener('click', pauseCounter);
+
+//set interval
+
+clock = setInterval(nextSlide, 1000);
+
+function pauseCounter() {
+  clearInterval(clock);
+}
+
+function playCounter() {
+  clock = setInterval(nextSlide, 1000);
+}
 
 //le mie funzioni next e prev
 

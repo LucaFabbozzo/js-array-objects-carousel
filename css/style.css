@@ -21,14 +21,14 @@ img {
 
 
 .slider {
-  height: 700px;
+  position: relative;
   cursor: pointer;
 }
 
 
 .slider .bottom {
+  margin-top: -4px;
   display: flex;
-  position: relative;
 }
 
 .slider .bottom img {
@@ -60,14 +60,14 @@ img {
 .btn-arrow {
   position: absolute;
   cursor: pointer;
-  bottom: 35%;
+  bottom: 6%;
   transform: translateX(-50%);
-  background-color: rgb(164, 163, 163);
-  width: 25px;
-  height: 25px;
+  background-color: #cb1616;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   text-align: center;
-  line-height: 25px;
+  line-height: 20px;
 }
 
 .btn-arrow.right {
@@ -75,7 +75,7 @@ img {
 }
 
 .btn-arrow.left {
-  left: 3%;
+  left: 5%;
 }
 
 
@@ -87,12 +87,34 @@ img {
 
 .top h2 {
   position: absolute;
-  top: 10%;
+  top: 6%;
   right: 5%;
+  font-size: 1.8rem;
+  color: #cb1616;
+  text-transform: uppercase;
 }
 
 .top p {
   position: absolute;
   top: 20%;
   right: 5%;
+  font-weight: bold;
+}
+
+
+
+/* bottoni inferiori */
+
+.down {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_bottom_stop {
+  background-color: #cb1616;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #f5f2f2;
+  cursor: pointer;
 }
