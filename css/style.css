@@ -38,6 +38,9 @@ img {
 
 
 /* classi speciali */
+.bottom img.active  {
+  opacity: 0.7;
+}
 
 .item {
   display: none;

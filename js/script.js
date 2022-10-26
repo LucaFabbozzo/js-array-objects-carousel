@@ -67,17 +67,19 @@ sliders.forEach(slide => {
   topSlider.innerHTML += topImages;
 
   let bottomImages = `
-    <img src="${slide.photo}" alt="${slide.title}"> 
+    <img class="small" src="${slide.photo}" alt="${slide.title}"> 
   `;
 
   bottomSlider.innerHTML += bottomImages;
 })
 
 
-//creo una collection di items e gli aggiungo a tutti una classe active
+//creo una collection di items e thumbs e gli aggiungo a tutti una classe active
 const items = document.getElementsByClassName('item');
-items[counterImages].classList.add('active');
+const thumbs = document.getElementsByClassName('small')
 
+items[counterImages].classList.add('active');
+thumbs[counterImages].classList.add('active');
 
 //prendo i miei bottoni 
 
@@ -89,16 +91,20 @@ btnPrev.addEventListener('click', prevSlide);
 function nextSlide() {
   //rimuovo la classe active e poi la rimetto per poter andare in avanti
   items[counterImages].classList.remove('active');
+  thumbs[counterImages].classList.remove('active');
   counterImages++
   if(counterImages === sliders.length) counterImages = 0;
   items[counterImages].classList.add('active');
+  thumbs[counterImages].classList.add('active');
 }
 
 
 function prevSlide() {
    //rimuovo la classe active e poi la rimetto per poter andare tornare indietro 
  items[counterImages].classList.remove('active'); 
+ thumbs[counterImages].classList.remove('active');
  counterImages--
  if(counterImages < 0 ) counterImages = sliders.length - 1;
  items[counterImages].classList.add('active');
+ thumbs[counterImages].classList.add('active');
 }
