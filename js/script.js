@@ -53,14 +53,20 @@ const sliders = [
 
 
 sliders.forEach(slide => {
-  let image = `
+  let topImages = `
   <div class="rel">
     <h2>${slide.title}</h2>
     <p>${slide.description}</p>
-    <img src="${slide.photo}" alt="cusco">
+    <img src="${slide.photo}" alt="${slide.title}">
   <div>
   `;
 
-  topSlider.innerHTML += image;
+  topSlider.innerHTML += topImages;
+
+  let bottomImages = `
+    <img src="${slide.photo}" alt="${slide.title}"> 
+  `;
+
+  bottomSlider.innerHTML += bottomImages;
 })
 
