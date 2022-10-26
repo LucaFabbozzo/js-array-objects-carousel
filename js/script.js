@@ -11,3 +11,56 @@
 // **Bonus 2:**
 // E se volessi un bottone per invertire la “direzione” del carosello?
 // ****
+
+const sliderCont = document.querySelector('.slider');
+const topSlider = document.querySelector('.top');
+const bottomSlider = document.querySelector('.bottom');
+const btnRight = document.querySelector('.right');
+const brnLeft = document.querySelector('.left');
+
+
+let counterImages = 0;
+
+
+const sliders = [
+  {
+    title: "Cusco",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sunt.",
+    photo: "/img/1.jpg"
+  },
+  {
+    title: "Salinas",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sunt.",
+    photo: "/img/2.jpg"
+  },
+  {
+    title: "Selva",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sunt.",
+    photo: "/img/3.jpg"
+  },
+  {
+    title: "Pucalpa",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sunt.",
+    photo: "/img/4.jpg"
+  },
+  {
+    title: "Mercado Central",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sunt.",
+    photo: "/img/5.jpg"
+  }
+];
+
+
+
+sliders.forEach(slide => {
+  let image = `
+  <div class="rel">
+    <h2>${slide.title}</h2>
+    <p>${slide.description}</p>
+    <img src="${slide.photo}" alt="cusco">
+  <div>
+  `;
+
+  topSlider.innerHTML += image;
+})
+

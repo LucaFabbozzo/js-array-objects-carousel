@@ -22,10 +22,10 @@ img {
 
 
 .slider {
+  height: 700px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column; 
 }
+
 
 .slider .bottom {
   display: flex;
@@ -49,10 +49,28 @@ img {
   line-height: 25px;
 }
 
+.btn-arrow.right {
+  right: 3%;
+}
+
 .btn-arrow.left {
   left: 3%;
 }
 
-.btn-arrow.right {
-  right: 3%;
+
+
+.rel {
+  position: relative;
+}
+
+.top h2 {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.top p {
+  position: absolute;
+  top: 20%;
+  right: 5%;
 }
