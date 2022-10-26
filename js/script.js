@@ -90,6 +90,7 @@ btnPrev.addEventListener('click', prevSlide);
 btnBottomStop.addEventListener('click', pauseCounter);
 btnBottomPlay.addEventListener('click', playCounter);
 btnBottomRewind.addEventListener('click', rewindCounter);
+
 //set interval
 
 clock = setInterval(nextSlide, 1000);

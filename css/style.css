@@ -31,6 +31,10 @@ img {
   display: flex;
 }
 
+.slider i {
+  color: #f5f2f2;
+}
+
 .slider .bottom img {
   width: calc(100% / 5);
 }
