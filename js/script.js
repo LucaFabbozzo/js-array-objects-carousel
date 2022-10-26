@@ -20,6 +20,7 @@ const btnPrev = document.querySelector('.left');
 const btnBottomStop = document.querySelector('.stop');
 const btnBottomPlay = document.querySelector('.play');
 const btnBottomRewind = document.querySelector('.rewind');
+const btnBottomFast = document.querySelector('.fast');
 
 let topImages = '';
 let bottomImages = '';
@@ -90,6 +91,9 @@ btnPrev.addEventListener('click', prevSlide);
 btnBottomStop.addEventListener('click', pauseCounter);
 btnBottomPlay.addEventListener('click', playCounter);
 btnBottomRewind.addEventListener('click', rewindCounter);
+btnBottomFast.addEventListener('click', fastCounter);
+
+console.log(btnBottomFast)
 
 //set interval
 
@@ -103,8 +107,13 @@ function playCounter() {
   clock = setInterval(nextSlide, 1000);
 }
 
+function fastCounter() {
+  clock = setInterval(nextSlide, 200);
+}
+
+
 function rewindCounter() {
-  clock = setInterval(prevSlide, 1000);
+  clock = setInterval(prevSlide, 800);
 }
 
 //le mie funzioni next e prev
