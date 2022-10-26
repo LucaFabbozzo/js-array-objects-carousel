@@ -17,7 +17,8 @@ const topSlider = document.querySelector('.top');
 const bottomSlider = document.querySelector('.bottom');
 const btnNext = document.querySelector('.right');
 const btnPrev = document.querySelector('.left');
-const btnBottomStop = document.querySelector('.btn_bottom_stop');
+const btnBottomStop = document.querySelector('.stop');
+const btnBottomPlay = document.querySelector('.play');
 
 let topImages = '';
 let bottomImages = '';
@@ -86,7 +87,7 @@ thumbs[counterImages].classList.add('active');
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
 btnBottomStop.addEventListener('click', pauseCounter);
-
+btnBottomPlay.addEventListener('click', playCounter);
 //set interval
 
 clock = setInterval(nextSlide, 1000);

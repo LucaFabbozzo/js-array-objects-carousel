@@ -111,9 +111,9 @@ img {
   justify-content: center;
 }
 
-.btn_bottom_stop {
+.btn_bottom {
   background-color: #cb1616;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border-radius: 5px;
   color: #f5f2f2;
   cursor: pointer;
