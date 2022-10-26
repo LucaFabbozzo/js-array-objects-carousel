@@ -14,7 +14,6 @@ img {
 }
 
 
-
 .container {
   width: 50%;
   margin: 30px auto;
@@ -35,6 +34,25 @@ img {
 .slider .bottom img {
   width: calc(100% / 5);
 }
+
+
+
+/* classi speciali */
+
+.item {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
+/* bottoni right left */
 
 .btn-arrow {
   position: absolute;
@@ -58,6 +76,7 @@ img {
 }
 
 
+/* descrizioni foto */
 
 .rel {
   position: relative;

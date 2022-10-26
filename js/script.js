@@ -15,11 +15,14 @@
 const sliderCont = document.querySelector('.slider');
 const topSlider = document.querySelector('.top');
 const bottomSlider = document.querySelector('.bottom');
-const btnRight = document.querySelector('.right');
-const brnLeft = document.querySelector('.left');
+const btnNext = document.querySelector('.right');
+const btnPrev = document.querySelector('.left');
 
 
+let topImages = '';
+let bottomImages = '';
 let counterImages = 0;
+let clock;
 
 
 const sliders = [
@@ -54,7 +57,7 @@ const sliders = [
 
 sliders.forEach(slide => {
   let topImages = `
-  <div class="rel">
+  <div class="item rel">
     <h2>${slide.title}</h2>
     <p>${slide.description}</p>
     <img src="${slide.photo}" alt="${slide.title}">
@@ -70,3 +73,32 @@ sliders.forEach(slide => {
   bottomSlider.innerHTML += bottomImages;
 })
 
+
+//creo una collection di items e gli aggiungo a tutti una classe active
+const items = document.getElementsByClassName('item');
+items[counterImages].classList.add('active');
+
+
+//prendo i miei bottoni 
+
+btnNext.addEventListener('click', nextSlide);
+btnPrev.addEventListener('click', prevSlide);
+
+//le mie funzioni next e prev
+
+function nextSlide() {
+  //rimuovo la classe active e poi la rimetto per poter andare in avanti
+  items[counterImages].classList.remove('active');
+  counterImages++
+  if(counterImages === sliders.length) counterImages = 0;
+  items[counterImages].classList.add('active');
+}
+
+
+function prevSlide() {
+   //rimuovo la classe active e poi la rimetto per poter andare tornare indietro 
+ items[counterImages].classList.remove('active'); 
+ counterImages--
+ if(counterImages < 0 ) counterImages = sliders.length - 1;
+ items[counterImages].classList.add('active');
+}
