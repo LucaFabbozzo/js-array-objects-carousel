@@ -93,7 +93,6 @@ btnBottomPlay.addEventListener('click', playCounter);
 btnBottomRewind.addEventListener('click', rewindCounter);
 btnBottomFast.addEventListener('click', fastCounter);
 
-console.log(btnBottomFast)
 
 //set interval
 
